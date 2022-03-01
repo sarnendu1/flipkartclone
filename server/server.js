@@ -21,7 +21,7 @@ const URL = 'mongodb+srv://sarnendu:rupu@flipkartclone.qqvrd.mongodb.net/flipkar
 
 Connection(process.env.MONGODB_URI || URL);
 
-if(process.env.NODE_ENV==='production'){
+if(process.env.NODE_ENV === 'production'){
     app.use(express.static('client/build'))
 }
 
