@@ -14,14 +14,12 @@ const app = express();
 
 const PORT = process.env.PORT || 8000;
 
-const username = process.env.DB_USERNAME;
-const password = process.env.DB_PASSWORD;
 
 const URL = 'mongodb+srv://sarnendu:rupu@flipkartclone.qqvrd.mongodb.net/flipkartclone?retryWrites=true&w=majority';
 
 Connection(process.env.MONGODB_URI || URL);
 
-if(process.env.NODE_ENV === 'production'){
+if(process.env.NODE_ENV==='production'){
     app.use(express.static('client/build'))
 }
 
